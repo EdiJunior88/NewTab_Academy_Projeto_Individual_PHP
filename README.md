@@ -40,7 +40,7 @@
 
 <p>A modelagem inicial para a implementação da solução é a seguinte:</p>
 
-<img src="App_Cadastro_Clientes/img/01.png" alt="">
+<img src="app-cadastro-clientes/src/img/modelo-de-dados.png" alt="">
 
 <p>Você deve alterar esta modelagem para que a mesma cumpra com as três primeiras formas normais.</p>
 
