@@ -1,15 +1,15 @@
-CREATE DATABASE  IF NOT EXISTS `app` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `app`;
--- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
+CREATE DATABASE  IF NOT EXISTS `appCadastroClientes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `appCadastroClientes`;
+-- MySQL dump 10.19  Distrib 10.3.34-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: app
+-- Host: 127.0.0.1    Database: appCadastroClientes
 -- ------------------------------------------------------
--- Server version	8.0.28-0ubuntu4
+-- Server version	10.3.34-MariaDB-0+dde
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -18,34 +18,34 @@ USE `app`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cliente`
+-- Table structure for table `Pedido`
 --
 
-DROP TABLE IF EXISTS `cliente`;
+DROP TABLE IF EXISTS `Pedido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cliente` (
-  `NumeroPedido` int NOT NULL AUTO_INCREMENT,
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Pedido` (
+  `NumeroPedido` int(11) NOT NULL AUTO_INCREMENT,
   `NomeCliente` varchar(100) NOT NULL,
   `CPF` char(11) NOT NULL,
-  `Email` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `DtPedido` date DEFAULT NULL,
-  `CodBarras` varchar(20) DEFAULT NULL,
+  `Email` char(30) DEFAULT NULL,
+  `DataPedido` datetime DEFAULT NULL,
+  `CodigoBarras` varchar(20) DEFAULT NULL,
   `NomeProduto` varchar(100) DEFAULT NULL,
   `ValorUnitario` double DEFAULT NULL,
-  `Quantidade` int DEFAULT NULL,
+  `Quantidade` int(11) DEFAULT NULL,
   PRIMARY KEY (`NumeroPedido`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cliente`
+-- Dumping data for table `Pedido`
 --
 
-LOCK TABLES `cliente` WRITE;
-/*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'Eduardo Chagas','12121212121','eduardoch@gmail.com','2021-05-20','',NULL,NULL,NULL),(2,'Maria Eduarda','23232323232','mariaeduarda@outlook.com','2022-01-01',NULL,NULL,NULL,NULL),(3,'João Petrucio ','45454545451','petrucio123@hotmail.com','2022-05-05',NULL,NULL,NULL,NULL),(4,'Tales Luan','78787878787','tete12_yt@bol.com.br','2022-01-01',NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
+LOCK TABLES `Pedido` WRITE;
+/*!40000 ALTER TABLE `Pedido` DISABLE KEYS */;
+INSERT INTO `Pedido` VALUES (1,'Anderson Mario','12121212122','anderson33@gmail.com',NULL,NULL,NULL,NULL,NULL),(2,'Maria Albuquerque','23232323235','mariate@outlook.com',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `Pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-25 22:42:28
+-- Dump completed on 2022-08-29 21:51:49
