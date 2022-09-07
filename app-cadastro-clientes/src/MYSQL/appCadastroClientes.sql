@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `appCadastroClientes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `appCadastroClientes` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 USE `appCadastroClientes`;
 -- MySQL dump 10.19  Distrib 10.3.34-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: appCadastroClientes
+-- Host: localhost    Database: appCadastroClientes
 -- ------------------------------------------------------
 -- Server version	10.3.34-MariaDB-0+dde
 
@@ -27,10 +27,6 @@ DROP TABLE IF EXISTS `Pedido`;
 CREATE TABLE `Pedido` (
   `NumeroPedido` int(11) NOT NULL AUTO_INCREMENT,
   `NomeCliente` varchar(100) NOT NULL,
-  `CPF` char(11) NOT NULL,
-  `Email` char(30) DEFAULT NULL,
-  `DataPedido` datetime DEFAULT NULL,
-  `CodigoBarras` varchar(20) DEFAULT NULL,
   `NomeProduto` varchar(100) DEFAULT NULL,
   `ValorUnitario` double DEFAULT NULL,
   `Quantidade` int(11) DEFAULT NULL,
@@ -44,7 +40,7 @@ CREATE TABLE `Pedido` (
 
 LOCK TABLES `Pedido` WRITE;
 /*!40000 ALTER TABLE `Pedido` DISABLE KEYS */;
-INSERT INTO `Pedido` VALUES (1,'Anderson Mario','12121212122','anderson33@gmail.com',NULL,NULL,NULL,NULL,NULL),(2,'Maria Albuquerque','23232323235','mariate@outlook.com',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Pedido` VALUES (1,'Anderson Mario','Monitor',NULL,NULL),(2,'Maria Albuquerque','Tablet',NULL,NULL);
 /*!40000 ALTER TABLE `Pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-29 21:51:49
+-- Dump completed on 2022-09-06 23:56:05
