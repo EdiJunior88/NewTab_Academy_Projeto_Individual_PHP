@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Table, Titulo } from "./styles";
+import {
+  Table,
+  Titulo,
+  Container,
+  ContainerTitulo,
+  BotaoMudarPagina,
+} from "./styles";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -20,8 +27,14 @@ export const Home = () => {
   }, []);
 
   return (
-    <div>
-      <Titulo>Lista</Titulo>
+    <Container>
+      <ContainerTitulo>
+        <Titulo>Lista de Produtos</Titulo>
+        <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
+          <BotaoMudarPagina>Cadastrar Produtos</BotaoMudarPagina>
+        </Link>
+      </ContainerTitulo>
+
       <Table>
         <thead>
           <tr>
@@ -43,6 +56,6 @@ export const Home = () => {
           ))}
         </tbody>
       </Table>
-    </div>
+    </Container>
   );
 };

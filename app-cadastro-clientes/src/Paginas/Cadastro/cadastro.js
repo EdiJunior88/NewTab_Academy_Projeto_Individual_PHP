@@ -4,11 +4,16 @@ import {
   AlertaSucesso,
   AlertaErro,
   Container,
+  ContainerTitulo,
+  BotaoMudarPagina,
   ContainerFormulario,
   Formulario,
   SubContainerFormularios,
+  Label,
+  Input,
   Botao,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
   const [produto, setProduto] = useState({
@@ -63,7 +68,12 @@ export const Cadastro = () => {
 
   return (
     <Container>
-      <Titulo>Cadastrar</Titulo>
+      <ContainerTitulo>
+        <Titulo>Cadastro de Produtos</Titulo>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <BotaoMudarPagina>Home</BotaoMudarPagina>
+        </Link>
+      </ContainerTitulo>
 
       {status.tipo === "erro" ? <AlertaErro>{status.mensagem}</AlertaErro> : ""}
       {status.tipo === "sucesso" ? (
@@ -75,8 +85,8 @@ export const Cadastro = () => {
       <ContainerFormulario onSubmit={cadastrarProduto}>
         <Formulario>
           <SubContainerFormularios>
-            <label>Cliente</label>
-            <input
+            <Label>Cliente</Label>
+            <Input
               type='text'
               name='cliente'
               placeholder='Digite o seu nome'
@@ -85,8 +95,8 @@ export const Cadastro = () => {
           </SubContainerFormularios>
 
           <SubContainerFormularios>
-            <label>Produto</label>
-            <input
+            <Label>Produto</Label>
+            <Input
               type='text'
               name='produto'
               placeholder='Digite o produto'
