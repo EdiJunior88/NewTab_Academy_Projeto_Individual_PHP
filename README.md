@@ -9,7 +9,18 @@
 
 <p>Não se esqueça que o direcionamento aqui na plataforma é apenas uma parte de todos os recursos que estão disponíveis para que você evolua no aprendizado e na carreira, você deve aproveitar o apoio de facilitadores, os encontros coletivos, e os demais recursos que vão sendo liberados, é com este conjunto que acreditamos que você de fato vai conseguir se desenvolver ainda mais!</p>
 
-<p>IMPORTANTE: Se organize para desenvolver cada atividade em uma semana.</p>
+<hr>
+
+<h3>Tecnologias Utilizadas</h3>
+
+- <img width='25' height='25' src='https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg' alt='PHP'/> [PHP](http://www.php.net/) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png' alt='SQL'/> [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- <img width='25' height='25' src='https://img.stackshare.io/service/6749/styled-components.png' alt='styled-components'/> [styled-components](https://styled-components.com) – JavaScript Framework Components
+
+Para ver todas as tecnologias [clique aqui](/techstack.md)
 
 <hr>
 
